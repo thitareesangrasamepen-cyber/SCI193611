@@ -40,6 +40,9 @@ import urllib.error
 import urllib.request
 from typing import NamedTuple
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 # ชื่อ: (base_url, ตัวแปรสภาพแวดล้อมที่เก็บ key, โมเดลตั้งต้น)
 # ลำดับในนี้คือลำดับที่ใช้เดา ถ้าไม่ได้ระบุผู้ให้บริการมา
 PROVIDERS = {
